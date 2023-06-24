@@ -1,0 +1,6 @@
+'couple-correct', (0, 70)
+'distance-correct', (512, 70)
+'closer_city-correct', (1024, 70)
+'check_abstraction-correct', (1536, 70)
+'squares-correct', (2048, 70)
+'key_of_min_value-correct', (2560, 70)
