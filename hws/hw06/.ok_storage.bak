@@ -1,0 +1,8 @@
+'cadr-caddr-correct', (0, 70)
+'unique-correct', (512, 70)
+'cons-all-correct', (1024, 70)
+'replicate-correct', (1536, 70)
+'accumulate-correct', (2048, 70)
+'accumulate-tail-correct', (2560, 70)
+'list-change-correct', (3072, 70)
+'list-comp-correct', (3584, 70)

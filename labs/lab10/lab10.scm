@@ -3,6 +3,9 @@
 
 (define (over-or-under x y)
   'YOUR-CODE-HERE
+  (cond ((> x y) 1)
+        ((< x y) -1)
+        (else 0))
 )
 
 ;;; Tests
@@ -15,6 +18,13 @@
 
 (define (filter-lst f lst)
   'YOUR-CODE-HERE
+  (if (null? lst)
+      nil
+      (if (f (car lst))
+          (cons (car lst) (filter-lst f (cdr lst)))
+          (filter-lst f (cdr lst))
+          )
+      )
 )
 
 ;;; Tests
@@ -25,6 +35,8 @@
 
 (define (make-adder num)
   'YOUR-CODE-HERE
+  (lambda (x)
+          (+ x num))
 )
 
 ;;; Tests
