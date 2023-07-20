@@ -7,7 +7,7 @@ test = {
         {
           'code': r"""
           >>> check_passphrase(passphrase) # Ensuring you completed design doc & changed passphrase
-          '814716d640bad70cbb9c76c72f2810e06f588a1bc1039d2510acab2d'
+          '9c557774afa3f7b5670f10a5ca54be0eedb8384a780375daa0340b45'
           """,
           'hidden': False,
           'locked': False
