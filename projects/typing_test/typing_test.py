@@ -86,6 +86,7 @@ def swap_score(s1, s2):
 # END Q1-5
 
 # Question 6
+
 '''
 def score_function(word1, word2):
     """A score_function that computes the edit distance between word1 and word2."""
@@ -102,25 +103,28 @@ def score_function(word1, word2):
         return 0 
         # END Q6
 
-    elif word1[0] != word2[0]: # Feel free to remove or add additional cases
+    elif word1[0] == word2[0]: # Feel free to remove or add additional cases
         # BEGIN Q6
         "*** YOUR CODE HERE ***"
+        return score_function(word1[1:], word2[1:])
 
         # END Q6
-        min([score_function(word1[i:], word2[j:]) + score_function(word1[i:], word1)\
-        + score_function(word2[j:], word2) for i in range(l1) for j in range(l2)])
+        # min([score_function(word1[i:], word2[j:]) + score_function(word1[i:], word1)\
+        # + score_function(word2[j:], word2) for i in range(l1) for j in range(l2)])
 
     else:
-        # add_char = ______________  # Fill in these lines
-        # remove_char = ______________ 
-        # substitute_char = ______________ 
+        add_char = add_weight + score_function(word1, word2[1:])  # Fill in these lines
+        remove_char =  del_weight + score_function(word1[1:], word2)
+        substitute_char = subs_weight + score_function(word1[1:], word2[1:]) 
         # BEGIN Q6
         "*** YOUR CODE HERE ***"
+        return min(add_char, remove_char, substitute_char)
         # END Q6
 '''
 
 subs_weight = 1
 del_weight = 1
+add_weight = 1
 
 def score_function(word1, word2):
 
@@ -133,17 +137,23 @@ def score_function(word1, word2):
     return min(subs_weight + score_function(word2[0] + word1[1:], word2),\
                 del_weight + score_function(word1[1:], word2))
 
+'''
+def find(w1, w2):
+    # recursive find; runs slower
+    l1, l2 = len(w1), len(w2)
+    if w1 in w2:
+        return True
+    elif l1 > l2:
+        return find(w2, w1)
+    elif l1 == l2 or l2 <= 2:
+        return False
+    else:
+        return max([find(w1, w2[:i] + w2[i+1:]) for i in range(l2-2)])
+'''
+
+# find: check substring
 def find(w1, w2, f = True):
     l1, l2 = len(w1), len(w2)
-    # ↓↓↓original version: ignore argument f; runs slower
-    # if w1 in w2:
-    #     return True
-    # elif l1 > l2:
-    #     return find(w2, w1)
-    # elif l1 == l2 or l2 <= 2:
-    #     return False
-    # else:
-    #     return max([find(w1, w2[:i] + w2[i+1:]) for i in range(l2-2)])
     if w1 in w2:
         return True
     elif l1 > l2 and f:
@@ -155,8 +165,6 @@ def find(w1, w2, f = True):
         while i < l2 and w1[0] != w2[i]:
             i += 1
         return i != l2 and find(w1[1:], w2[i+1:], False)
-
-
 
 KEY_DISTANCES = get_key_distances()
 
