@@ -1,3 +1,7 @@
+'''
+Q 5 6 7 8 are very interesting.
+'''
+
 """ Homework 2: Higher Order Functions"""
 
 HW_SOURCE_FILE = 'hw02.py'
