@@ -1,3 +1,7 @@
+'''
+Q4 is interesting
+'''
+
 """ Lab 07: Midterm Review """
 
 def paths(m, n):
