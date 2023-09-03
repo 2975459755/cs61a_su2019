@@ -1,3 +1,4 @@
+;Q9,10 are interesting
 ;; Scheme ;;
 
 
