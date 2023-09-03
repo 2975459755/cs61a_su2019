@@ -1,4 +1,4 @@
-;Q4 is hard
+;Q4 is hard, Q8 is interesting
 
 ;;;;;;;;;;;;;;;
 ;; Questions ;;
