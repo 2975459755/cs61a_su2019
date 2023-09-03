@@ -1,3 +1,7 @@
+'''
+Q8: cycle is interesting
+'''
+
 """ Optional problems for lab02 """
 
 from lab02 import *
