@@ -1,3 +1,7 @@
+'''
+Q6 is interesting
+'''
+
 """ Optional problems for Lab 9 """
 
 class Link:
