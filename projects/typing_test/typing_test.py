@@ -1,3 +1,7 @@
+'''
+Score function is interesting
+'''
+
 """ Typing Test implementation """
 
 from utils import *
